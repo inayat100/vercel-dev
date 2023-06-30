@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %} Sing in {% endblock title %}
+{% block body %}
+<div class="container">
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="id_username">Username:</label>
+    <input type="text" name="username" class="form-control my-2" maxlength="150" autofocus required id="id_username">
+
+     <label for="id_password">password:</label>
+    <input type="password" name="password" class="form-control my-2" maxlength="150" autofocus required id="id_password">
+
+      <input type="submit" class="btn btn-primary w-100 my-2">
+</form>
+</div>
+{% endblock body %}
